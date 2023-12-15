@@ -30,8 +30,19 @@ statement in the callback function is required.
 ```
 const newArray = Array.filter((item, index, array) => {
   // do some stuff
-  return boolean (true or false)
+  return boolean; // (true or false)
 });
 ```
 This function takes the array and returns an array with all elements whose
-elements match a condition. Inside the callback function, a boolean has to be returned.
+elements match a condition. Inside the callback function, a boolean has to be
+returned.
+
+### `Array.find`
+```
+const firstMatchingItem = Array.find((item, index, array) => {
+  // do some stuff
+  return boolean; // (true or false)
+});
+```
+This function takes the array and returns the first element that matches a
+condition. Inside the callback function, a boolean has to be returned.
