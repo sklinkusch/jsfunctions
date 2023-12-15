@@ -25,3 +25,13 @@ const newArray = Array.map((item, index, array) => {
 ```
 This function takes the array and returns an array of equal size. A return
 statement in the callback function is required.
+
+### `Array.filter`
+```
+const newArray = Array.filter((item, index, array) => {
+  // do some stuff
+  return boolean (true or false)
+});
+```
+This function takes the array and returns an array with all elements whose
+elements match a condition. Inside the callback function, a boolean has to be returned.
