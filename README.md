@@ -10,6 +10,7 @@ This is a collection of useful Javascript functions for different types.
       1. [Array.filter](#filter)
       1. [Array.find](#find)
       1. [Array.findIndex](#findindex)
+      1. [Array.reduce](#reduce)
 
 ## Array functions<a name="array"></a>
 
@@ -64,8 +65,23 @@ condition given in the callback function. Thus, a boolean has to be returned ins
 const indexOfFirstMatchingItem = Array.find((item, index, array) => {
   // do some stuff
   return boolean; // true or false
-})
+});
 ```
 This function takes the array and returns the index of the first element that
 matches the condition given in the callback function. Thus, a boolean has to be
 returned inside the callback function.
+
+#### `Array.reduce`<a name="reduce"></a>
+```javascript
+const singleValue = Array.reduce((accumulator, item, index, array) => {
+  // do some stuff
+  return valueForLoopTurn;
+}, startValue);
+```
+This function takes the array and returns a single value. This value can be of
+any type (string, number, boolean, array, object, ...). The start value (usually
+`0`, `''`, `[]`, `{}`, `true`, `false`) is the accumulator in the first turn.
+The return value in the callback function in one loop turn is the accumulator in
+the next turn. The return value in the last loop turn is the return value of the
+whole function. This way, one can sum up the values of an array, compose a
+string or sequentially build up an array or object.
