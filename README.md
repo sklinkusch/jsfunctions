@@ -9,13 +9,16 @@ This is a collection of useful Javascript functions for different types.
       1. [Array.map](#map)
       1. [Array.filter](#filter)
       1. [Array.find](#find)
+      1. [Array.findLast](#findlast)
       1. [Array.findIndex](#findindex)
+      1. [Array.findLastIndex](#findlastindex)
       1. [Array.reduce](#reduce)
       1. [Array.sort](#sort)
           1. [sort by ASCII characters](#sortascii)
           1. [numerical sorting](#sortnumbers)
           1. [alphabetical sorting](#sortalphabetical)
           1. [sorting with locales](#sortlocales)
+      1. [Array.every](#every)
 
 ## Array functions<a name="array"></a>
 
@@ -63,7 +66,12 @@ const firstMatchingItem = Array.find((item, index, array) => {
 });
 ```
 This function takes the array and returns the first element that matches the
-condition given in the callback function. Thus, a boolean has to be returned inside the callback function.
+condition given in the callback function. Thus, a boolean has to be returned
+inside the callback function.
+
+#### `Array.findLast`<a name="findlast"></a>
+This function does the same as [`Array.find`](#find) but iterates the array from
+the last to the first item. Thus, the last matching item is found and returned.
 
 #### `Array.findIndex`<a name="findindex"></a>
 ```javascript
@@ -75,6 +83,11 @@ const indexOfFirstMatchingItem = Array.find((item, index, array) => {
 This function takes the array and returns the index of the first element that
 matches the condition given in the callback function. Thus, a boolean has to be
 returned inside the callback function.
+
+#### `Array.findLastIndex`<a name="findlastindex"></a>
+This function does the same as [`Array.findIndex`](#findindex) but iterates the
+array from the last to the first item. Thus, the index of the last matching item
+is found and returned.
 
 #### `Array.reduce`<a name="reduce"></a>
 ```javascript
@@ -174,3 +187,14 @@ and the other options (options are given as an object):
     unequal, e.g. `"a" ≠ "b"`, `"a" ≠ "à"`, `"a" ≠ "A"`
 * **ignorePunctuation** *(boolean)*: whether punctuation should be ignored,
   default is `false`.
+
+#### `Array.every`<a name="every"></a>
+```javascript
+const doAllElementsFit = Array.every((item, index, array) => {
+  // do some stuff
+  return boolean; // true or false
+});
+```
+This function checks if all elements of an array match the condition given in
+the callback function. This callback function should return a boolean, depending
+on if the condition is matched.
