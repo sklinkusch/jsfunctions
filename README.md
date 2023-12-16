@@ -221,3 +221,13 @@ const mergedArray = array1.concat(array2);
 ```
 This function merges two arrays by appending the elements of the second array to
 the first array. It does the same as `[ ...array1, ...array2 ]`.
+
+#### `Array.fill`<a name="fill"></a>
+```javascript
+const filledArray = Array.fill(replaceValue, start, end);
+```
+This function replaces the elements from the index `start` to `end - 1` within
+the source array with `replaceValue`. The parameters `start` and `end` are
+optional. If `end` is omitted, all elements from the `start` to `Array.length - 1`
+are replaced. If `start` and `end` are omitted, all elements of the source array
+are replaced.
