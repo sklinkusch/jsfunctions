@@ -22,6 +22,8 @@ This is a collection of useful Javascript functions for different types.
       1. [Array.every](#every)
    1. [Non-loop-based functions](#array-nonloop)
       1. [Array.concat](#concat)
+      1. [Array.fill](#fill)
+      1. [Array.flat](#flat)
 
 ## Array functions<a name="array"></a>
 
@@ -231,3 +233,14 @@ the source array with `replaceValue`. The parameters `start` and `end` are
 optional. If `end` is omitted, all elements from the `start` to `Array.length - 1`
 are replaced. If `start` and `end` are omitted, all elements of the source array
 are replaced.
+
+#### `Array.flat`<a name="flat"></a>
+```javascript
+const flatArray = Array.flat(flatDegree);
+```
+This function takes an array containing also sub-arrays and creates a new array
+where the sub-arrays are concatenated up to a depth of `flatDegree`. This
+parameter is optional. If it is omitted, it is set to `1`. The parameter
+`flatDegree` is a positive number or `Infinity`. In the latter case, all
+sub-arrays are concatenated, resulting an array containing all elements in the
+array and sub-arrays.
