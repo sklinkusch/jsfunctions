@@ -18,6 +18,7 @@ This is a collection of useful Javascript functions for different types.
           1. [numerical sorting](#sortnumbers)
           1. [alphabetical sorting](#sortalphabetical)
           1. [sorting with locales](#sortlocales)
+      1. [Array.some](#some)
       1. [Array.every](#every)
 
 ## Array functions<a name="array"></a>
@@ -188,6 +189,17 @@ and the other options (options are given as an object):
 * **ignorePunctuation** *(boolean)*: whether punctuation should be ignored,
   default is `false`.
 
+#### `Array.some`<a name="some"></a>
+```javascript
+const doesOneElementFit = Array.some((item, index, array) => {
+  // do some stuff
+  return boolean; // true or false
+});
+```
+This function checks if at least one element of the array matches the condition
+given in the callback function. This callback function must return a boolean,
+dependent on if the condition is matched.
+
 #### `Array.every`<a name="every"></a>
 ```javascript
 const doAllElementsFit = Array.every((item, index, array) => {
@@ -196,5 +208,5 @@ const doAllElementsFit = Array.every((item, index, array) => {
 });
 ```
 This function checks if all elements of an array match the condition given in
-the callback function. This callback function should return a boolean, depending
+the callback function. This callback function must return a boolean, depending
 on if the condition is matched.
