@@ -20,6 +20,8 @@ This is a collection of useful Javascript functions for different types.
           1. [sorting with locales](#sortlocales)
       1. [Array.some](#some)
       1. [Array.every](#every)
+   1. [Non-loop-based functions](#array-nonloop)
+      1. [Array.concat](#concat)
 
 ## Array functions<a name="array"></a>
 
@@ -210,3 +212,12 @@ const doAllElementsFit = Array.every((item, index, array) => {
 This function checks if all elements of an array match the condition given in
 the callback function. This callback function must return a boolean, depending
 on if the condition is matched.
+
+### Non-loop-based functions<a name="array-nonloop"></a>
+
+#### `Array.concat`<a name="concat"></a>
+```javascript
+const mergedArray = array1.concat(array2);
+```
+This function merges two arrays by appending the elements of the second array to
+the first array. It does the same as `[ ...array1, ...array2 ]`.
