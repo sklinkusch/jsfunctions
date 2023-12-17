@@ -25,6 +25,7 @@ This is a collection of useful Javascript functions for different types.
       1. [Array.fill](#fill)
       1. [Array.flat](#flat)
       1. [Array.from](#from)
+      1. [Array.includes](#includes)
       1. [Array.isArray](#isarray)
       1. [Array.reverse](#reverse)
       1. [Array.slice](#slice)
@@ -228,6 +229,12 @@ const newArray = Array.from(iterableItem, mapFn, thisArg)
 ```
 This function creates a new array from an iterable item like a `Set`, a `Map`, or a `NodeList`. Optionally, a callback function for a `map`
 and the `this` parameter within this `map` can be provided. The callback function has only the parameters `item` and `index`.
+
+#### `Array.includes`<a name="includes"></a>
+```javascript
+const isElementInArray = sourceArray.includes(element);
+```
+This function checks if `element` is one of the elements in the source array. It returns a boolean with the result.
 
 #### `Array.isArray`<a name="isarray"></a>
 ```javascript
