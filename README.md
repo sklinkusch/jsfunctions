@@ -24,6 +24,7 @@ This is a collection of useful Javascript functions for different types.
       1. [Array.concat](#concat)
       1. [Array.fill](#fill)
       1. [Array.flat](#flat)
+      1. [Array.from](#from)
 
 ## Array functions<a name="array"></a>
 
@@ -216,3 +217,10 @@ const flatArray = Array.flat(flatDegree);
 This function takes an array containing also sub-arrays and creates a new array where the sub-arrays are concatenated up to a depth of
 `flatDegree`. This parameter is optional. If it is omitted, it is set to `1`. The parameter `flatDegree` is a positive number or `Infinity`.
 In the latter case, all sub-arrays are concatenated, resulting an array containing all elements in the array and sub-arrays.
+
+#### `Array.from`<a name="from"></a>
+```javascript
+const newArray = Array.from(iterableItem, mapFn, thisArg)
+```
+This function creates a new array from an iterable item like a `Set`, a `Map`, or a `NodeList`. Optionally, a callback function for a `map`
+and the `this` parameter within this `map` can be provided. The callback function has only the parameters `item` and `index`.
