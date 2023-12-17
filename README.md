@@ -38,6 +38,7 @@ This is a collection of useful Javascript functions for different types.
       1. [Array.slice](#slice)
       1. [Array.splice](#splice)
       1. [Array.unshift](#unshift)
+      1. [Array.with](#with)
 
 ## Array functions<a name="array"></a>
 
@@ -322,3 +323,9 @@ const newLength = sourceArray.unshift(...newElements);
 ```
 This function takes the source array, adds `newElements` at the beginning, overwrites the source array, and returns the number of the
 resulting array.
+
+#### `Array.with`<a name="with"></a>
+```javascript
+const newArray = sourceArray.with(index, newElement);
+```
+This function takes the source array, replaces `sourceArray[index]` with `newElement`, and returns the resulting array.
