@@ -28,6 +28,7 @@ This is a collection of useful Javascript functions for different types.
       1. [Array.isArray](#isarray)
       1. [Array.reverse](#reverse)
       1. [Array.slice](#slice)
+      1. [Array.splice](#splice)
 
 ## Array functions<a name="array"></a>
 
@@ -247,3 +248,11 @@ const copiedArray = sourceArray.slice(start, end);
 This function generates a shallow copy of an array or of parts of it. The parameters `start` and `end` are optional: `start` is the first
 item to be copied, `end` is the first item that should not be copied. If `end` is omitted the array from `start` to `sourceArray.length - 1`
 is copied. If both parameters are omitted, the whole array is copied.
+
+#### `Array.splice`<a name="splice"></a>
+```javascript
+const removedItems = sourceArray.splice(start, deleteCount, ...items);
+```
+This function takes the source array, removes `deleteCount` items starting from `start` and inserts `items` instead. An array with the
+removed items is returned. After that, the source array is changed. If `deleteCount` is set to `0`, the `items` are just inserted without
+removal. The parameters `deleteCount` and `...items` are optional. 
