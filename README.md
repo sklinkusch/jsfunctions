@@ -28,6 +28,7 @@ This is a collection of useful Javascript functions for different types.
       1. [Array.includes](#includes)
       1. [Array.indexOf](#indexof)
       1. [Array.isArray](#isarray)
+      1. [Array.join](#join)
       1. [Array.lastIndexOf](#lastindexof)
       1. [Array.reverse](#reverse)
       1. [Array.slice](#slice)
@@ -240,16 +241,23 @@ This function checks if `element` is one of the elements in the source array. It
 
 #### `Array.indexOf`<a name="indexof"></a>
 ```javascript
-const index = sourceArray.indexOf(element);
+const index = sourceArray.indexOf(element, startIndex);
 ```
 The function takes the source array and returns the index where the element can be found in the array for the first time. If the element is
-not found within the array, `-1` is returned.
+not found within the array, `-1` is returned. If not the whole array should be searched, the optional parameter `startIndex` can be set.
 
 #### `Array.isArray`<a name="isarray"></a>
 ```javascript
 const isItAnArray = Array.isArray(elementToBeTested);
 ```
 This function tests if the `elementToBeTested` is an array or not. The function returns a boolean.
+
+#### `Array.join`<a name="join"></a>
+```javascript
+const combinedString = sourceArray.join(separator);
+```
+This function takes the elements of the source array and combines them to a string, separated by the optional parameter `separator`. If
+`separator` is omitted, a comma (`,`) is used. 
 
 #### `Array.lastIndexOf`<a name="lastindexof"></a>
 This function works similar as [Array.indexOf](#indexof), but returns the index of the last element in the array. If the element is not
