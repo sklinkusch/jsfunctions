@@ -28,6 +28,7 @@ This is a collection of useful Javascript functions for different types.
       1. [Array.includes](#includes)
       1. [Array.indexOf](#indexof)
       1. [Array.isArray](#isarray)
+      1. [Array.lastIndexOf](#lastindexof)
       1. [Array.reverse](#reverse)
       1. [Array.slice](#slice)
       1. [Array.splice](#splice)
@@ -249,6 +250,10 @@ not found within the array, `-1` is returned.
 const isItAnArray = Array.isArray(elementToBeTested);
 ```
 This function tests if the `elementToBeTested` is an array or not. The function returns a boolean.
+
+#### `Array.lastIndexOf`<a name="lastindexof"></a>
+This function works similar as [Array.indexOf](#indexof), but returns the index of the last element in the array. If the element is not
+found within the array, `-1` is returned.
 
 #### `Array.reverse`<a name="reverse"></a>
 ```javascript
