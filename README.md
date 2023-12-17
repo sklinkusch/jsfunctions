@@ -32,6 +32,7 @@ This is a collection of useful Javascript functions for different types.
       1. [Array.lastIndexOf](#lastindexof)
       1. [Array.of](#of)
       1. [Array.pop](#pop)
+      1. [Array.push](#push)
       1. [Array.reverse](#reverse)
       1. [Array.slice](#slice)
       1. [Array.splice](#splice)
@@ -277,6 +278,12 @@ array is returned.
 const removedElement = sourceArray.pop();
 ```
 This function removes the last element from an array and returns the removed element.
+
+#### `Array.push`<a name="push"></a>
+```javascript
+const newLength = sourceArray.push(newElement);
+```
+This function adds a new element to a source array, overwrites the source array, and returns the length of the new array-
 
 #### `Array.reverse`<a name="reverse"></a>
 ```javascript
