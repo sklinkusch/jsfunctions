@@ -37,6 +37,7 @@ This is a collection of useful Javascript functions for different types.
       1. [Array.shift](#shift)
       1. [Array.slice](#slice)
       1. [Array.splice](#splice)
+      1. [Array.unshift](#unshift)
 
 ## Array functions<a name="array"></a>
 
@@ -282,9 +283,10 @@ This function removes the last element from an array, overwrites the source arra
 
 #### `Array.push`<a name="push"></a>
 ```javascript
-const newLength = sourceArray.push(newElement);
+const newLength = sourceArray.push(...newElements);
 ```
-This function adds a new element to a source array, overwrites the source array, and returns the length of the new array-
+This function takes the source array, add `newElements` at the end of the array, overwrites the source array, and returns the length of the
+new array.
 
 #### `Array.reverse`<a name="reverse"></a>
 ```javascript
@@ -313,3 +315,10 @@ const removedItems = sourceArray.splice(start, deleteCount, ...items);
 This function takes the source array, removes `deleteCount` items starting from `start` and inserts `items` instead. An array with the
 removed items is returned. After that, the source array is changed. If `deleteCount` is set to `0`, the `items` are just inserted without
 removal. The parameters `deleteCount` and `...items` are optional. 
+
+#### `Array.unshift`<a name="unshift"></a>
+```javascript
+const newLength = sourceArray.unshift(...newElements);
+```
+This function takes the source array, adds `newElements` at the beginning, overwrites the source array, and returns the number of the
+resulting array.
