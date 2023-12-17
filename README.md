@@ -26,6 +26,7 @@ This is a collection of useful Javascript functions for different types.
       1. [Array.flat](#flat)
       1. [Array.from](#from)
       1. [Array.includes](#includes)
+      1. [Array.indexOf](#indexof)
       1. [Array.isArray](#isarray)
       1. [Array.reverse](#reverse)
       1. [Array.slice](#slice)
@@ -235,6 +236,13 @@ and the `this` parameter within this `map` can be provided. The callback functio
 const isElementInArray = sourceArray.includes(element);
 ```
 This function checks if `element` is one of the elements in the source array. It returns a boolean with the result.
+
+#### `Array.indexOf`<a name="indexof"></a>
+```javascript
+const index = sourceArray.indexOf(element);
+```
+The function takes the source array and returns the index where the element can be found in the array for the first time. If the element is
+not found within the array, `-1` is returned.
 
 #### `Array.isArray`<a name="isarray"></a>
 ```javascript
