@@ -34,6 +34,7 @@ This is a collection of useful Javascript functions for different types.
       1. [Array.pop](#pop)
       1. [Array.push](#push)
       1. [Array.reverse](#reverse)
+      1. [Array.shift](#shift)
       1. [Array.slice](#slice)
       1. [Array.splice](#splice)
 
@@ -277,7 +278,7 @@ array is returned.
 ```javascript
 const removedElement = sourceArray.pop();
 ```
-This function removes the last element from an array and returns the removed element.
+This function removes the last element from an array, overwrites the source array, and returns the removed element.
 
 #### `Array.push`<a name="push"></a>
 ```javascript
@@ -290,6 +291,12 @@ This function adds a new element to a source array, overwrites the source array,
 const reversedArray = sourceArray.reverse();
 ```
 This function takes a source array and returns an array with the same elements in the opposite order.
+
+#### `Array.shift`<a name="shift"></a>
+```javascript
+const removedElement = sourceArray.shift();
+```
+This function removes the first element from the source array, overwrites the source array, and returns the removed element.
 
 #### `Array.slice`<a name="slice"></a>
 ```javascript
