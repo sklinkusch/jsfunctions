@@ -1,7 +1,5 @@
 # Array functions
 
-This is a collection of useful Javascript functions for different types.
-
 ## Table of Contents
 1. [Loop-based functions](#array-loop)
     1. [Array.forEach](#forEach)
