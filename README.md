@@ -27,6 +27,7 @@ This is a collection of useful Javascript functions for different types.
       1. [Array.from](#from)
       1. [Array.isArray](#isarray)
       1. [Array.reverse](#reverse)
+      1. [Array.slice](#slice)
 
 ## Array functions<a name="array"></a>
 
@@ -238,3 +239,11 @@ This function tests if the `elementToBeTested` is an array or not. The function 
 const reversedArray = sourceArray.reverse();
 ```
 This function takes a source array and returns an array with the same elements in the opposite order.
+
+#### `Array.slice`<a name="slice"></a>
+```javascript
+const copiedArray = sourceArray.slice(start, end);
+```
+This function generates a shallow copy of an array or of parts of it. The parameters `start` and `end` are optional: `start` is the first
+item to be copied, `end` is the first item that should not be copied. If `end` is omitted the array from `start` to `sourceArray.length - 1`
+is copied. If both parameters are omitted, the whole array is copied.
