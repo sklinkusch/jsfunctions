@@ -30,6 +30,7 @@ This is a collection of useful Javascript functions for different types.
       1. [Array.isArray](#isarray)
       1. [Array.join](#join)
       1. [Array.lastIndexOf](#lastindexof)
+      1. [Array.of](#of)
       1. [Array.reverse](#reverse)
       1. [Array.slice](#slice)
       1. [Array.splice](#splice)
@@ -262,6 +263,13 @@ This function takes the elements of the source array and combines them to a stri
 #### `Array.lastIndexOf`<a name="lastindexof"></a>
 This function works similar as [Array.indexOf](#indexof), but returns the index of the last element in the array. If the element is not
 found within the array, `-1` is returned.
+
+#### `Array.of`<a name="of"></a>
+```javascript
+const newArray = Array.of(...elements);
+```
+This function creates a new array including the list of elements passed as parameters. If no elements are passed as parameters, an empty
+array is returned.
 
 #### `Array.reverse`<a name="reverse"></a>
 ```javascript
