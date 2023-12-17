@@ -25,6 +25,7 @@ This is a collection of useful Javascript functions for different types.
       1. [Array.fill](#fill)
       1. [Array.flat](#flat)
       1. [Array.from](#from)
+      1. [Array.reverse](#reverse)
 
 ## Array functions<a name="array"></a>
 
@@ -224,3 +225,9 @@ const newArray = Array.from(iterableItem, mapFn, thisArg)
 ```
 This function creates a new array from an iterable item like a `Set`, a `Map`, or a `NodeList`. Optionally, a callback function for a `map`
 and the `this` parameter within this `map` can be provided. The callback function has only the parameters `item` and `index`.
+
+#### `Array.reverse`<a name="reverse"></a>
+```javascript
+const reversedArray = sourceArray.reverse();
+```
+This function takes a source array and returns an array with the same elements in the opposite order.
