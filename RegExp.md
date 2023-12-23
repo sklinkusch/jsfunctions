@@ -53,3 +53,15 @@ There are some general character classes. The most important ones are mentioned 
 - `\t`: This is a horizontal tab.
 - `|`: This is a disjunction. It shows two alternatives. The expression `/creator|player/` is matching for `"creator"` as well as for
   `"player"`.
+
+#### Assertions
+Assertions are special characters used to mark boundaries or conditions.
+
+- `^` (not within character classes): This shows the beginning of a line or document.
+- `$`: This shows the end of a line or document.
+- `\b` (not within character classes): This shows the beginning or end of a word.
+- `\B`: This shows a non-word boundary.
+- `x(?=y)`: This is a lookahead assertion. It matches `x` only when it is followed by `y`. The `y` is not part of the match results.
+- `x(?!y)`: This is the negative lookahead assertion. It matches every `x` that is not followed by `y`.
+- `(?<=y)x`: This is a lookbehind assertion. It matches `x` only it follows `y`. The `y` is not part of the match results.
+- `(?<!y)x`: This is the negative lookbehind assertion. It matches every `x` that does not follow `y`.
