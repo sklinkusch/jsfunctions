@@ -73,3 +73,25 @@ Patterns can be grouped into groups.
 - `(x)`: This is a group. The group is then remembered and accessible from the RegExp object's properties.
 - `(?<Name>x)`: This is a named captured group. Here, `x` is captured and stored under the name `Name`.
 - `(?:x)`: Non-capturing group. Every group that is not used later should be made like this for performance issues.
+
+#### Quantifiers
+Quantifiers tell us how often a character, a character class, or a group should occur in a string.
+
+- `x*`: The asterisk stands for at least zero consecutive occurrences of `x`.
+- `x+`: The plus sign stands for at least one consecutive occurrence of `x`.
+- `x?`: The question mark stands for zero or one occurrence of `x`.
+- `x{n}`: A non-negative whole number `n` in curly braces stands for exactly `n` consecutive occurrences of `x`.
+- `x{n,}`: A non-negative whole number `n` followed by a comma in curly braces stands for `n` or more consecutive occurrences of `x`.
+- `x{n,m}`: Two non-negative whole numbers `n` and `m` (`m>n`) in curly braces, separated by a comma, stand for `n` to `m` consecutive
+  occurrences of `x`.
+- A question mark after a quantifier makes the regular expression "non-greedy", i.e. they stop searching if the condition is fulfilled. This
+  can be described with an example:
+
+```javascript
+const string = '<div><p><span>Hi!</span></p></div>';
+const greedyRegExp = /<.*>/;
+const nonGreedyRegExp = /<.*?>/;
+```
+If we test the string with the two regular expressions, they will return a different number of occurrences. The first one will return one
+occurrence (the whole string), while the second one will return six occurrences (`"<div>"`, `"<p>"`, `"<span>"`, `"</span>"`, `"</p>"`, and
+`"</div>"`).
