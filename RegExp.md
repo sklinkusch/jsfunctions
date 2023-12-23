@@ -33,7 +33,8 @@ their purposes:
 
 - Character classes, such as numbers, alphabetical characters, whitespaces
 - Assertions, e.g. beginning and end of a line or word
-- Groups and Backreferences
+- Groups
+- Backreferences (not covered here)
 - Quantifiers
 
 **Note:** If the real character is meant within a regular expression, it must be escaped with a backslash before it.
@@ -65,3 +66,10 @@ Assertions are special characters used to mark boundaries or conditions.
 - `x(?!y)`: This is the negative lookahead assertion. It matches every `x` that is not followed by `y`.
 - `(?<=y)x`: This is a lookbehind assertion. It matches `x` only it follows `y`. The `y` is not part of the match results.
 - `(?<!y)x`: This is the negative lookbehind assertion. It matches every `x` that does not follow `y`.
+
+#### Groups
+Patterns can be grouped into groups.
+
+- `(x)`: This is a group. The group is then remembered and accessible from the RegExp object's properties.
+- `(?<Name>x)`: This is a named captured group. Here, `x` is captured and stored under the name `Name`.
+- `(?:x)`: Non-capturing group. Every group that is not used later should be made like this for performance issues.
