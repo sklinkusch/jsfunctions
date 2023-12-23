@@ -37,3 +37,19 @@ their purposes:
 - Quantifiers
 
 **Note:** If the real character is meant within a regular expression, it must be escaped with a backslash before it.
+
+#### Character classes
+There are some general character classes. The most important ones are mentioned in the following list:
+
+- `[a-c]` or `[wxz]`: This is a general character class. It is matched for any of the characters given in the class.
+- `[^a-c]` or `[^wxz]`: This is a negated character class. It is matched for any character except the ones given in the class.
+- `.`: This is any single character.
+- `\d` or `[0-9]`: This is any digit (Arabic numeral).
+- `\D` or `[^0-9]`: This is any character but no digit (Arabic numeral).
+- `\w`: This is an alphanumeric character or the underscore, i.e. the same as `[A-Za-z0-9_]`.
+- `\W`: This is any character that is not alphanumeric or the underscore, i.e. the same as `[^A-Za-z0-9_]`.
+- `\s`: This is a single whitespace character, e.g. a space, a tab, a form feed, or a line feed.
+- `\S`: This is any character that is not a whitespace.
+- `\t`: This is a horizontal tab.
+- `|`: This is a disjunction. It shows two alternatives. The expression `/creator|player/` is matching for `"creator"` as well as for
+  `"player"`.
