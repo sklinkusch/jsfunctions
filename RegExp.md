@@ -1,5 +1,6 @@
 # Regular Expressions (Regex, Regexp, RegEx, or RegExp)
 Regular expressions are patterns used for character recognition in strings. They consist of simple characters and special characters.
+Regular expressions originate in the script language Perl.
 
 ## Creation of a regular expression
 There are two ways in creating a regular expression:
@@ -25,3 +26,14 @@ const simpleRegExp = /holidays/;
 ```
 This regular expression searches a text for all occurrences of **holidays** (in small letters). Usually, for such a simple task, a regular
 expression is not necessary.
+
+### Special characters
+There are several characters that have a special meaning when using regular expressions. They are put into a number of groups according to
+their purposes:
+
+- Character classes, such as numbers, alphabetical characters, whitespaces
+- Assertions, e.g. beginning and end of a line or word
+- Groups and Backreferences
+- Quantifiers
+
+**Note:** If the real character is meant within a regular expression, it must be escaped with a backslash before it.
