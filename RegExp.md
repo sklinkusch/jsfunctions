@@ -95,3 +95,17 @@ const nonGreedyRegExp = /<.*?>/;
 If we test the string with the two regular expressions, they will return a different number of occurrences. The first one will return one
 occurrence (the whole string), while the second one will return six occurrences (`"<div>"`, `"<p>"`, `"<span>"`, `"</span>"`, `"</p>"`, and
 `"</div>"`).
+
+### Flags
+Regular expressions may have flags that can enhance the functionality when searching with the pattern.
+
+| flag | description | property |
+|------|-------------|----------|
+| `d`  | generate indices for substring matches | `hasIndices` |
+| `g`  | general search | `global` |
+| `i`  | case-insensitive search | `ignoreCase` |
+| `m`  | allows `^` and `$` to match newline characters | `multiline` |
+| `s`  | allows `.` to match newline characters | `dotAll` |
+| `u`  | treat a pattern as a sequence of Unicode code points | `unicode` |
+| `v`  | upgrade to the `u` mode with more unicode feature | `unicodeSets` |
+| `y`  | sticky search, matches starting at the current position | `sticky` |
